@@ -16,9 +16,6 @@ public class MenuItem {
         return dateAdded;
     }
 
-    public void setDate(Date date) {
-        this.dateAdded = date;
-    }
 
 
     public double getPrice() {
@@ -77,8 +74,17 @@ public class MenuItem {
         this.dateAdded = new Date();
     }
 
+    @Override
+    public String toString() {
+        return
+                "*****\n" + "Name: " + name + "\n" +
+                "Price: $" + price + "\n" +
+                "Category: " + category + "\n" +
+                "Description: " + description +
+                "Date: " + dateAdded + "\n****\n";
+    }
 
-//    public MenuItem(double price, String name, String description, String category, Boolean isNew, Boolean isVisible, Date date) {
+    //    public MenuItem(double price, String name, String description, String category, Boolean isNew, Boolean isVisible, Date date) {
 //        this.price = price;
 //        this.name = name;
 //        this.description = description;
